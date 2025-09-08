@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <meta charset="UTF-8" />
+    <head>
+        <link rel="stylesheet" href="paises.css" type="text/css">
+        <script src="countries.js" defer></script>
+        <script src="paises.js" defer></script>
+    </head>    
+    <body>
+        <div class="container">
+            <div class="topo"><h1 class="titulo">Países do Mundo</h1></div>
+
+            <div class="lateral">
+                <form class="formularios">
+
+                    <div class="div-regiao">
+                        <label for="regiao">Região</label>
+                        <select name="regiao" id="regiao">
+                            <option value="todas">Todas</option>
+                            <option value="america-norte">América do Norte</option>
+                            <option value="america-sul">América do Sul</option>
+                            <option value="europa">Europa</option>
+                            <option value="africa">África</option>
+                            <option value="asia">Ásia</option>
+                            <option value="oceania">Oceania</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="div-paginacao">
+                        <label for="tam-pagina">Paginação</label>
+                        <!-- Eu pensei em por um limite de paginas
+                        Mas como nao tinha instrucao sobre isso, deixei o max -->
+                        <input type="number" name="tam-pagina" id="tam-pagina" min="1" max="249" value="10">
+                    </div>
+
+                    <div class="div-nome-pais">
+                        <label for="nome-pais">Nome do País</label>
+                        <input type="text" name="nome-pais" id="nome-pais" placeholder="Brazil">
+                    </div>
+                </form>
+            </div>
+
+            <div class="centro">
+
+                <div class="cabecalho-centro">
+                    <h2 class="titulo-centro">Lista de Países</h2>
+                    <button class="botao-lista"><img src="botoes/lista.svg" alt="Lista"></button>
+
+                    <button class="botao-bloco"><img src="botoes/bloco.svg" alt="Bloco"></button> 
+                </div>
+
+                <div class="sublinhado-centro"></div>
+                
+                <div class="paises-centro">
+                    <div class="h2-centro">
+                        <span id="total-paises-centro">Total de paises encontrados: 249 país(es) encontrados</span>
+                        <span id="paginas-centro">
+                            <button id="volta-pag">&lt;&lt;</button>
+                            <span id="contador-pag">Página 1 de 25</span>
+                            <button id="avanca-pag">&gt;&gt;</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="mostra-paises"></div>
+            </div>
+        </div>
+    </body>
+</html>

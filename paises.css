@@ -1,0 +1,177 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+button, input, select{
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 1.05rem;
+}
+
+.botao-lista, .botao-bloco {
+  background: none;
+  border: 0;
+  padding: 5px;
+  cursor: pointer;
+  width: 40px; /*largura um pouco maior pra fiacr achatado*/
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-lista img, .botao-bloco img {
+  width: 24px; 
+  height: 24px;
+}
+
+.botao-lista:focus, .botao-bloco:focus {
+  outline: 2px solid #143e93;
+  outline-offset: 2px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(180px, 15%) 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+    "topo topo"
+    "lateral centro";
+    height:100vh;
+    gap: 3px;
+
+}
+.topo {
+    grid-area: topo;
+    background-color: #143e93;
+}
+
+.lateral {
+    grid-area: lateral;
+    background-color: #c4d6ff;
+}
+
+.centro {
+    grid-area: centro;
+    background-color: #d7e8fa;
+    color: #143e93;
+    padding-right: 15px;
+}
+
+.titulo{
+    color: white;
+    font-size: 32pt;
+    text-align: center;
+}
+.formularios{
+    margin-top: 10px;
+    padding: 5px;
+    color: #143e93;
+    overflow: hidden;
+}
+.cabecalho-centro
+{
+    text-align: left;
+    padding: 10px;
+    margin: 20px 0 30px 0;
+}
+.titulo-centro{
+    display: inline;
+    margin-right: 10px;
+}
+#nome-pais {
+  width: 90%;
+}
+ 
+.sublinhado-centro{
+    width: calc(100%  - 20px);
+    height: 2px;
+    background-color: #143e93;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.h2-centro{
+    padding: 10px;
+    text-align: left;
+}
+
+#regiao, #tam-pagina, #nome-pais{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+
+#volta-pag, #avanca-pag{
+    color: white;
+    background-color: #143e93;
+}
+
+.pais {
+  background-color: #c4d6ff;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid #143e93;
+  overflow: hidden;
+}
+
+.info-pais {
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+}
+
+.info-pais p {
+  margin: 4px 0;
+  padding: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bandeira-pais {
+  width: 25%;
+  float: right;
+  text-align: right;
+}
+
+.img-bandeira {
+  width: 128px;
+  height: auto;
+  max-width: 100%;
+}
+
+.mostra-paises.bloco .pais {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin: 3px;
+  padding: 5px;
+  background-color: #c4d6ff;
+  border: 1px solid #143e93;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mostra-paises.bloco .info-pais {
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+}
+
+.mostra-paises.bloco .bandeira-pais {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  text-align: right;
+}
+
+.mostra-paises.bloco .img-bandeira {
+  float: right;
+  height: auto;
+  margin-left: 8px;
+}
