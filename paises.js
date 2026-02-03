@@ -54,7 +54,7 @@ function mostrarPaises(listaPaises) {//essa funcao cria a parte onde vai ficar o
     divImg.classList.add('bandeira-pais');
 
     const img = document.createElement('img');
-    img.src = `flags/${pais.code}.png`;
+    img.src = `flags/${pais.code.toLowerCase()}.png`;
     img.alt = `Bandeira de ${pais.name}`;
     img.classList.add('img-bandeira');
 
